@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TackRoom — Refreshing Bank Setup</title>
+<style>
+  :root { --green:#1B3D2C; --tan:#C4874F; --cream:#F5F0E8; --dark:#1A1A1A; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; margin:0; background:var(--cream); color:var(--dark); line-height:1.55; min-height:100vh; display:flex; flex-direction:column; }
+  header { background:var(--green); color:#fff; padding:44px 24px; text-align:center; }
+  header h1 { margin:0; font-size:26px; }
+  main { max-width:520px; margin:0 auto; padding:32px 24px; flex:1; width:100%; }
+  .card { background:#fff; border-radius:12px; padding:28px 24px; box-shadow:0 2px 10px rgba(0,0,0,.05); text-align:center; }
+  .spinner { width:46px; height:46px; border:4px solid #E0D9CC; border-top-color:var(--green); border-radius:50%; margin:8px auto 18px; animation:spin .9s linear infinite; }
+  @keyframes spin { to { transform:rotate(360deg); } }
+  h2 { color:var(--green); margin:0 0 10px; font-size:22px; }
+  p { color:#555; margin:10px 0; }
+  .cta { display:inline-block; margin-top:14px; background:var(--green); color:#fff; padding:14px 28px; border-radius:10px; text-decoration:none; font-weight:600; }
+  .cta:hover { background:#14301f; }
+  .hint { font-size:13px; color:#888; margin-top:14px; }
+  footer { text-align:center; padding:20px; color:#888; font-size:13px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>TackRoom</h1>
+</header>
+<main>
+  <div class="card">
+    <div class="spinner" aria-hidden="true"></div>
+    <h2>Refreshing your bank setup</h2>
+    <p>Your Stripe onboarding link has expired or needs another step. Return to the TackRoom app and tap <strong>Continue bank setup</strong> to start a fresh session.</p>
+    <a class="cta" href="tackroom://connect-refresh">Return to TackRoom</a>
+    <p class="hint">If the button doesn&rsquo;t open the app, just close this tab and try again from your profile.</p>
+  </div>
+</main>
+<footer>&copy; TackRoom 2026</footer>
+<script>
+  setTimeout(function () {
+    window.location.href = "tackroom://connect-refresh";
+  }, 400);
+</script>
+</body>
+</html>
